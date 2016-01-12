@@ -82,16 +82,11 @@ public class App {
     }
 
     private static MongoClient getMongoClient() throws UnknownHostException {
-        MongoCredential credential = MongoCredential.createMongoCRCredential("usernamehere", "dbhere", "passwordhere".toCharArray());
-
         List<ServerAddress> serverAddresses = Arrays.asList(
-                new ServerAddress("178.62.248.4", 27017),
-                new ServerAddress("178.62.247.188", 27017),
-                new ServerAddress("178.62.247.189", 27017)
+                new ServerAddress("85.31.101.121", 27017)
         );
         return new MongoClient(
-                serverAddresses,
-                Arrays.asList(credential)
+                serverAddresses
                 );
     }
 }
